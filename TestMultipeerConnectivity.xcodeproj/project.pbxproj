@@ -13,6 +13,9 @@
 		B6F7B309225B1C0600B31F16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6F7B308225B1C0600B31F16 /* Assets.xcassets */; };
 		B6F7B30C225B1C0600B31F16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6F7B30A225B1C0600B31F16 /* LaunchScreen.storyboard */; };
 		B6F7B30F225B1C0600B31F16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F7B30E225B1C0600B31F16 /* main.m */; };
+		B6F7B317225B1DAE00B31F16 /* MCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F7B316225B1DAE00B31F16 /* MCViewController.m */; };
+		B6F7B31A225B1FA400B31F16 /* MultipeerSession.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F7B319225B1FA400B31F16 /* MultipeerSession.m */; };
+		B6F7B31D225B1FC900B31F16 /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6F7B31C225B1FC900B31F16 /* MultipeerConnectivity.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,11 @@
 		B6F7B30B225B1C0600B31F16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6F7B30D225B1C0600B31F16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6F7B30E225B1C0600B31F16 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B6F7B315225B1DAE00B31F16 /* MCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCViewController.h; sourceTree = "<group>"; };
+		B6F7B316225B1DAE00B31F16 /* MCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCViewController.m; sourceTree = "<group>"; };
+		B6F7B318225B1FA400B31F16 /* MultipeerSession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultipeerSession.h; sourceTree = "<group>"; };
+		B6F7B319225B1FA400B31F16 /* MultipeerSession.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultipeerSession.m; sourceTree = "<group>"; };
+		B6F7B31C225B1FC900B31F16 /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6F7B31D225B1FC900B31F16 /* MultipeerConnectivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +53,7 @@
 			children = (
 				B6F7B2FE225B1C0400B31F16 /* TestMultipeerConnectivity */,
 				B6F7B2FD225B1C0400B31F16 /* Products */,
+				B6F7B31B225B1FC800B31F16 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,13 +72,25 @@
 				B6F7B300225B1C0400B31F16 /* AppDelegate.m */,
 				B6F7B302225B1C0400B31F16 /* ViewController.h */,
 				B6F7B303225B1C0400B31F16 /* ViewController.m */,
+				B6F7B315225B1DAE00B31F16 /* MCViewController.h */,
+				B6F7B316225B1DAE00B31F16 /* MCViewController.m */,
 				B6F7B305225B1C0400B31F16 /* Main.storyboard */,
+				B6F7B318225B1FA400B31F16 /* MultipeerSession.h */,
+				B6F7B319225B1FA400B31F16 /* MultipeerSession.m */,
 				B6F7B308225B1C0600B31F16 /* Assets.xcassets */,
 				B6F7B30A225B1C0600B31F16 /* LaunchScreen.storyboard */,
 				B6F7B30D225B1C0600B31F16 /* Info.plist */,
 				B6F7B30E225B1C0600B31F16 /* main.m */,
 			);
 			path = TestMultipeerConnectivity;
+			sourceTree = "<group>";
+		};
+		B6F7B31B225B1FC800B31F16 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6F7B31C225B1FC900B31F16 /* MultipeerConnectivity.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +163,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6F7B317225B1DAE00B31F16 /* MCViewController.m in Sources */,
 				B6F7B304225B1C0400B31F16 /* ViewController.m in Sources */,
 				B6F7B30F225B1C0600B31F16 /* main.m in Sources */,
 				B6F7B301225B1C0400B31F16 /* AppDelegate.m in Sources */,
+				B6F7B31A225B1FA400B31F16 /* MultipeerSession.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,15 +309,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q66LFKWXGX;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = WMSS77X69Q;
 				INFOPLIST_FILE = TestMultipeerConnectivity/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.xxxxxxu.TestMultipeerConnectivity;
+				PRODUCT_BUNDLE_IDENTIFIER = com.netease.insightsdkTestMC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = multiMediaDev;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -302,15 +328,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q66LFKWXGX;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = WMSS77X69Q;
 				INFOPLIST_FILE = TestMultipeerConnectivity/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.xxxxxxu.TestMultipeerConnectivity;
+				PRODUCT_BUNDLE_IDENTIFIER = com.netease.insightsdkTestMC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = multiMediaDev;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
